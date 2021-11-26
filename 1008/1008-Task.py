@@ -1,4 +1,4 @@
-from functions import *
+#from functions import *
 
 
 def check_world_record(time, gender):

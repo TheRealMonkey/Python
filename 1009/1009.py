@@ -29,17 +29,18 @@ def calculate_target_bmi(bmi, target_bmi):
         return(f"you need to increase your bmi by {target_bmi-bmi}")
 
 
-
-
 def init():
-    age_in_years = float(input("Enter your age in years:"))
-    height_in_cm = float(input("Enter your height in cm:"))
-    weight_in_kg = float(input("Enter your wight in kg:"))
-    gender = input("enter your gender(m|f)").lower()
-    exercise_in_week = int(
-        input("Enter the number of times you exersice a week:"))
-    target_bmi = float(input("Enter the BMI you would like to achieve:"))
-
+    try:
+        age_in_years = float(input("Enter your age in years:"))
+        height_in_cm = float(input("Enter your height in cm:"))
+        weight_in_kg = float(input("Enter your wight in kg:"))
+        gender = input("enter your gender(m|f)").lower()
+        exercise_in_week = int(
+            input("Enter the number of times you exersice a week:"))
+        target_bmi = float(input("Enter the BMI you would like to achieve:"))
+    except:
+        print("You have inputted an invalid value")
+        return
     bmr = caluculate_bmr(gender, weight_in_kg, age_in_years, height_in_cm)
     bmi = weight_in_kg / ((height_in_cm*100) * (height_in_cm*100))
     colories_to_maintain = calcultae_clries_to_maintain(exercise_in_week, bmr)

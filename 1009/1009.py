@@ -29,8 +29,6 @@ def calculate_target_bmi(bmi, target_bmi):
         return(f"you need to increase your bmi by {target_bmi-bmi}")
 
 
-def convert_to_dp(number, dp):
-    return round(number, -abs(len(list(str(number).split(".")[0]))-abs(sf)))
 
 
 def init():

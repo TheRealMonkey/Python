@@ -4,4 +4,4 @@ array= [
         [ "cat",55,"32%","purple"],
         ["horse",124,"1%","rainbow"]
         ]
-print(sorted(array, key=lambda l:l[2]))
+print(sorted(array, key=lambda a:a[2]))

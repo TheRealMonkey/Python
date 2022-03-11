@@ -13,10 +13,11 @@ def get_user_choice():
     return user_choice_as_int
 
 
-def convert_value(value, convert_to):
+def convert_value(message, convert_to):
     not_valid = True
     while not_valid:
         try:
+            inputted_data = input(message)
             if convert_to == "int":
                 converted_value = int(value)
             elif convert_to == "float":
